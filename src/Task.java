@@ -8,7 +8,6 @@ public class Task {
     private String description;
     private LocalDateTime deadline;
     private final Boolean isPersonalTask;
-    private Boolean isRemote = false;
 
     public Task(String header, String description, LocalDateTime deadline,
                 Boolean isPersonalTask) {
@@ -19,20 +18,12 @@ public class Task {
 
     }
 
-    public Boolean getRemote() {
-        return isRemote;
-    }
-
     public Integer getId() {
         return id;
     }
 
     protected LocalDateTime getDeadline() {
         return deadline;
-    }
-
-    public void setRemote(Boolean remote) {
-        isRemote = remote;
     }
 
     public void setHeader(String header) {
@@ -68,7 +59,7 @@ public class Task {
     public String toString() {
         String s = "личная";
         if (!isPersonalTask) s = "рабочая";
-        return id + "   " + header + ": " + description  +  "\nТип задачи: " + s;
+        return id + "   " + header + ": " + description + "\nТип задачи: " + s;
 
     }
 }
