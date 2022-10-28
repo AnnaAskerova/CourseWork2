@@ -15,7 +15,6 @@ public class Task {
         setDescription(description);
         this.deadline = deadline;
         this.isPersonalTask = isPersonalTask;
-
     }
 
     public Integer getId() {
@@ -27,19 +26,11 @@ public class Task {
     }
 
     public void setHeader(String header) {
-        if (header == null || header.isBlank()) {
-            throw new IllegalArgumentException();
-        } else {
-            this.header = header;
-        }
+        this.header = header;
     }
 
     public void setDescription(String description) {
-        if (description == null || description.isBlank()) {
-            throw new IllegalArgumentException();
-        } else {
-            this.description = description;
-        }
+        this.description = description;
     }
 
     @Override
